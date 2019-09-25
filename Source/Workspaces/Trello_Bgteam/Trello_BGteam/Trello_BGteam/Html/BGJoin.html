@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BG Join</title>
+    <script type="text/javascript" src="UserLogin.js"></script>
+    <script type="text/javascript" src="Script1.js"></script>
+     
+</head>
+
+<body bgcolor="white">
+    <style>
+        input[type=text],input[type=password],input[type=email] {
+            width: 45%;
+            padding: 15px 20px;
+            display: inline-block;
+            border: 1px solid #ccc;
+           }
+    </style>
+    <center>
+        <div style="background:#EEEEEE; width : 700px; height : 955px; ">
+            <br />
+            <FONT size="5">
+                <p align="right" onclick="winOpen('Guide.html')" style="cursor:pointer">안내서&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </FONT>
+            <div align="left">
+                <a href="/login">
+                    <img src="image/back.png" width="65" weight="100" style="margin-left:40px" />
+
+                </a>
+            </div>
+            <FONT face="궁서">
+                <FONT size="10">
+                    <p align="center">
+                        Trello
+                        <br />
+                        <FONT size=" 4">
+                            Sign Up
+                        </FONT>
+                    </p>
+                </FONT>
+
+            </FONT>
+          
+                <font size="6">
+                    <p align="left">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ID
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="userid" name="id" size="30" maxlength="15" />
+                    </p>
+
+                    <p align="left">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PW
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="password" name="password" size="30" maxlength="17" />
+                    </p>
+
+                    <p align="left">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NAME
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="user_name" name="username" size="30" maxlength="7" />
+                    </p>
+                    <p align="left">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-MAIL
+                        &nbsp;&nbsp;&nbsp;&nbsp;<input type="email" id="email" name="email" size="30" maxlength="25" />
+                    </p>
+                </font>
+
+                <br />
+                <font size="7">
+                    <div align="center">
+                        <input type="button" value="회원가입" name="가입" style="height:50px;width:200px" onclick="SignUp()" />
+
+                    </div>
+                </font>
+        </div>
+    </center>
+</body>
+</html>

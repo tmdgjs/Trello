@@ -1,0 +1,29 @@
+﻿.projectchatbtn {
+    float: right;
+    background-color: #eeeeee;
+    padding: 5px ;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    border: 2px solid #4CAF50;
+    border-right: none;
+    width : 20%;
+    text-align : center;
+    
+
+    -webkit-border-top-left-radius: 37px;
+    -moz-border-radius-topleft: 37px;
+    border-top-left-radius: 37px;
+    -webkit-border-top-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
+    border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 37px;
+    -moz-border-radius-bottomleft: 37px;
+    border-bottom-left-radius: 37px
+}

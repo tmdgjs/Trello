@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BGSearchPW</title>
+    <script type="text/javascript">
+        function adjust_textarea(h) {
+            h.style.height = "20px";
+            h.style.height = (h.scrollHeight) + "px";
+        }
+    </script>
+    <script type="text/javascript" src="UserLogin.js"></script>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css" />
+</head>
+<body bgcolor="white">
+
+
+    <center>
+        <div style="background:#EEEEEE; width : 700px; height : 955px; ">
+            <br />
+            <br />
+            <br />
+
+            <p align="left">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/login"><img src="image/back.png" width="65" weight="100" /></a>
+            </p>
+
+
+            <FONT face="궁서">
+                <FONT size="10">
+                    <p align="center">
+                        Trello
+                        <br />
+
+                    </p>
+                </FONT>
+
+            </FONT>
+
+
+            <form action="/findpass" method="post">
+                <div class="form-style-8">
+
+                    <font size="6">
+                        <p align="left">
+                            &nbsp;E-Mail
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;<input type="email" id="user_email" name="email" size="30" maxlength="25" />
+                        </p>
+                    </font>
+
+                    <br />
+
+                </div>
+                <font size="6">
+                    <p align="center">
+                        <br />
+                        <input type="submit" style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-decoration: none; display: inline-block; font-size: 18px;" value="찾기" />
+                    </p>
+                </font>
+            </form>
+            <br />
+            <br />
+            <div style="background:#EEEEEE; width : 600px; height : 100px;border:2px solid black;border-top-left-radius: 25px 25px;border-top-right-radius: 25px 25px;border-bottom-left-radius: 25px 25px;border-bottom-right-radius: 25px 25px;">
+                <font size="6">
+                    <p align="center">
+                        <span id="PW_result"></span>
+                    </p>
+                </font>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

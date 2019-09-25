@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TestPage</title>
+    <script src="Class.js"></script>
+    <script>
+        var user_key = "testtest";
+        function kakaochat() {
+
+            var http = new XMLHttpRequest();
+            var message = document.getElementById('messageinput').value;
+            console.log(message);
+           
+            http.onreadystatechange = function () {
+                if (http.readyState == 4 && http.status == 200) {
+                    var result = JSON.parse(http.responseText);
+                    alert(result.message.text);
+                }
+            }
+            http.open('POST', '/kakaochat/message', true);
+            
+            http.setRequestHeader("Content-Type", "application/json");
+            http.send(JSON.stringify({ type: "text", content: message, user_key:user_key }));
+        }
+        function getKakao() {
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function () {
+                if (http.readyState == 4 && http.status == 200) {
+                    var result = JSON.parse(http.responseText);
+                    console.log(result);
+                }
+            }
+            http.open('POST', '/getkakaouser', true);
+            http.send();
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text"id="messageinput"/>
+    <input type="datetime-local" />
+    <input type="button" onclick="kakaochat()" value="채팅" />
+    <input type="button" onclick="upTopic()" value="기종" />
+    <input type="date" />
+    <input type="datetime-local" />
+</body>
+</html>

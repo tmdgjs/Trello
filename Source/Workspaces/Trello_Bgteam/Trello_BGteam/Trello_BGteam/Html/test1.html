@@ -1,0 +1,711 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="utf-8" />
+    <title>TrelloBG</title>
+    <script type="text/javascript" src="../Javascript/checking.js"></script>
+    <script type="text/javascript" src="../Javascript/Script1.js"></script>
+    <script type="text/javascript" src="../Javascript/Class.js"></script>
+    <script type="text/javascript" src="../Javascript/Snow.js"></script>
+    <link rel="stylesheet" type="text/css" href="./correction.css" />
+    <link rel="stylesheet" type="text/css" href="./textandbtn.css" />
+    <link rel="stylesheet" type="text/css" href="./StyleSheet2.css" />
+    <link rel="stylesheet" type="text/css" href="./projectchat.css" />
+    <link rel="stylesheet" type="text/css" href="./checks.css" />
+    <link rel="stylesheet" type="text/css" href="./combo.css" />
+    <link rel="stylesheet" type="text/css" href="./writing.css" />
+    <link rel="stylesheet" type="text/css" href="./InputingName.css" />
+    <link rel="stylesheet" type="text/css" href="./Addtopic.css" />
+    <link rel="stylesheet" type="text/css" href="./ClassBtn.css" />
+    <link rel="stylesheet" type="text/css" href="./logout.css" />
+    <link rel="stylesheet" type="text/css" href="./CheckBoxes.css" />
+    <link rel="stylesheet" type="text/css" href="./CheckBox.css" />
+    <link rel="stylesheet" type="text/css" href="StyleSheet2.css" />
+    <link rel="stylesheet" type="text/css" href="ClassBtn.css" />
+    <link rel="stylesheet" type="text/css" href="logout.css" />
+    <link rel="stylesheet" type="text/css" href="CheckBox.css" />
+    <link rel="stylesheet" type="text/css" href="Chats.css" />
+    <script>
+        var isshow = -1;
+        var temp = 0;
+        var DTshow = 0;
+        var cm = 0;
+        var ctshow = 0;
+
+        function display_on_off() {
+            if (!isshow) {
+                document.getElementById("textar").hidden = "";
+
+                isshow = 1;
+
+            }
+            else {
+                document.getElementById("textar").hidden = "hidden";
+                isshow = 0;
+            }
+        }
+        function showClass() {
+
+            var x = document.getElementById("mainBox");
+            var y = document.getElementById("STBox");
+            console.log("x=" + x.style.visibility);
+            console.log("before display=" + x.style.visibility);
+            if (x.style.visibility === "visible") {
+                x.style.visibility = "hidden";
+                y.style.visibility = "visible";
+
+            } else {
+                x.style.visibility = "visible";
+                y.style.visibility = "hidden";
+            }
+            console.log("after display=" + x.style.visibility);
+        }
+        function showMemo() {
+
+            var y = document.getElementById("STBox");
+            console.log("y=" + y.style.visibility);
+            console.log("before display=" + y.style.visibility);
+            if (y.style.visibility === "visible") {
+                y.style.visibility = "hidden";
+            } else {
+                y.style.visibility = "visible";
+            }
+            console.log("after display=" + y.style.visibility);
+        }
+        function showextra() {
+
+        }
+        function output() {
+            var input = document.getElementById("input").value;
+            temp = input;
+            document.getElementById("output").value = temp;
+        }
+
+        function showplus(a) {
+            if (isshow == -1 || a == isshow) {
+                document.getElementById("extra" + isshow).hidden = "hidden";
+                document.getElementById("extra" + a).hidden = "";
+                isshow = a;
+            }
+            else {
+                document.getElementById("extra" + a).hidden = "hidden";
+                isshow = -1;
+            }
+        }
+        function showDT() {
+            if (!DTshow) {
+                ctshow = 0;
+                document.getElementById("chat").hidden = "hidden";
+                document.getElementById("inputerDT").hidden = "";
+                DTshow = 1;
+            }
+            else {
+                document.getElementById("inputerDT").hidden = "hidden";
+
+                DTshow = 0;
+            }
+        }
+        function showchat() {
+            if (!ctshow) {
+                document.getElementById('checks').checked = false;
+                document.getElementById("inputerDT").hidden = "hidden";
+                
+                DTshow = 0;
+                document.getElementById("chat").hidden = "";
+                ctshow = 1;
+            }
+            else {
+                document.getElementById("chat").hidden = "hidden";
+
+                ctshow = 0;
+            }
+        }
+        function addchat() {
+            document.getElementById("chattings").innerHTML += `<li class="self">
+                                <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2qiquKxkvC59CeXky8CTUMLyCEp5lRN8BYcm0ZIVJH46RwD64" draggable="false" /></div>
+                                <div class="msg">
+                                    <p>Puff...</p>
+                                    <p>Aún estoy haciendo el contexto de Góngora... <emoji class="books" /></p>
+                                    <p>Mejor otro día</p>
+                                    <time>20:18</time>
+                                </div>
+                            </li>
+                          `;
+        }
+        /*function correctionmode() {
+           
+            if (!cm) {
+                alert('수정모드입니다');
+                
+                cm = 1;
+            }
+            else {
+                alert('수정되었습니다.');
+                
+                cm = 0;
+            }
+
+        }*/
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .interface {
+            background: #EEEEEE;
+            width: 100%;
+            height: 13.8%;
+            border: 2px solid black;
+            border-bottom: none;
+            text-align: center;
+        }
+
+        .boxes {
+            background: #EEEEEE;
+            width: 100%;
+            height: 13.8%;
+            border: 2px solid black;
+            border-bottom: none;
+            text-align: center;
+            max-width: 100%;
+            background-size: cover;
+        }
+
+            .boxes .Btns {
+                color: #000000;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+        #class0x1 {
+            background-image: url(image/BattleGround.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        #wrap {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+            #wrap > div {
+                display: inline-block;
+                float: left;
+                height: 900px;
+            }
+
+        #mainBox { /*클래스 박스*/
+            background: #EEEEEE;
+            width: 100%;
+            border-bottom: 2px solid black;
+            visibility: hidden;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            border-top: 2px solid black;
+            margin-left: 10px;
+            float:left;
+        }
+
+        #STBox {
+            background: #EEEEEE;
+            background-repeat: no-repeat;
+            width: 82%;
+            margin-left: 10px;
+            border: 2px solid black;
+            background-image: url(image/start.png);
+        }
+
+
+        .subBox div:last-child {
+            border-bottom: 2px solid black;
+        }
+
+        .subBox {
+            width: 15%;
+        }
+
+        .AddBtn {
+            text-align: right;
+        }
+
+        .showfriend {
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .Title {
+            /*background-image: url(image/BattleGround.png);*/
+            background-size: inherit;
+            width: 50%;
+            height: auto;
+            border: 2px solid black;
+            border-top-left-radius: 10px 10px;
+            border-top-right-radius: 10px 10px;
+            border-bottom-left-radius: 10px 10px;
+            border-bottom-right-radius: 10px 10px;
+            margin: 10px 30px;
+            /*background-color: rgba(255,255,255,0.4);투명도*/
+        }
+
+
+        .Explanation {
+            background: #ffffff;
+            width: 50%;
+            height: auto;
+            border: 2px solid black;
+            border-top-left-radius: 10px 10px;
+            border-top-right-radius: 10px 10px;
+            border-bottom-left-radius: 10px 10px;
+            border-bottom-right-radius: 10px 10px;
+            margin: 10px 30px;
+            float : left;
+        }
+
+        #parah {
+            padding: 60px 50px;
+        }
+
+        .buttons {
+            background-color: crimson;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .buttons5 {
+            border-radius: 50%;
+        }
+
+        .Btns {
+            cursor: pointer;
+        }
+
+        #btns0x1 {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .inputting {
+            margin: 8px 0;
+            width: 45%;
+            height: 15%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid black;
+            background-color: #eeeeee;
+            font-size: 15px;
+            
+            
+        }
+
+        .upload {
+            margin: 8px 0;
+            width: 13%;
+            height: 15%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid black;
+            
+            background-color: #eeeeee;
+            font-size: 15px;
+        }
+
+        .inputtingname {
+            width: 8%;
+            height: auto;
+            padding: 15px;
+            margin: 0 0 10px 0;
+            box-sizing: border-box;
+            border: 3px solid white;
+            -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.5);
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .endtime {
+            width: 12%;
+            margin: 8px 0;
+            height: 15%;
+            box-sizing: border-box;
+            border: none;
+            font-size: 12px;
+            font-weight: bold;
+            border: 5px solid red;
+            border-left: none;
+            padding: 15px;
+            background: rgba(255,255,255,0.5);
+            margin: 0 0 10px 0;
+        }
+
+        .until {
+            width: 5%;
+            height: 15%;
+            box-sizing: border-box;
+            border: none;
+            background-color: #eeeeee;
+            font-size: 12px;
+            text-align: right;
+            border: 5px solid red;
+            border-right: none;
+            padding: 15px;
+            background: rgba(255,255,255,0.5);
+            margin: 0 0 10px 0;
+        }
+
+        
+
+        .plus {
+            cursor: pointer;
+        }
+
+        .scrollbar::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #ffffff;
+            margin: 10px 10px;
+        }
+
+        .scrollbar::-webkit-scrollbar {
+            width: 10px;
+            background-color: #eeeeee;
+        }
+
+        .scrollbar::-webkit-scrollbar-thumb { /*bar 색*/
+            background-color: skyblue;
+            
+        }
+
+        .locationsinput {
+            border: 3px solid white;
+            -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            font-size: 17px;
+            width: 6%;
+            height: 10%;
+            background: #fff982;
+            margin: 0 0 10px 0;
+            text-align: center;
+        }
+
+        .alls {
+            width: 100%;
+            height: auto;
+            /* text-decoration: line-through;*/
+        }
+
+        .pluscontent {
+            cursor: pointer;
+        }
+
+        .extraes {
+            position: relative;
+            top: 7%;
+            left: 50%;
+            width: 40%;
+            height: auto;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            font-size: 15px;
+            z-index: 1;
+            border: 3px solid #F5624D !important;
+            -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.5);
+        }
+
+        .SelectEndtime {
+            position: absolute;
+            top: 43%;
+            left: 56%;
+            width: 30%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            font-size: 15px;
+            border: 3px solid blue;
+            -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+            float: left;
+            margin-left: 5%;
+            text-align: center;
+            z-index : 0;
+      
+        }
+
+        .endtime2 {
+            width: 80%;
+            height: 15%;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 15px;
+            background: #EEEEEE;
+            margin: 0 0 10px 0;
+            box-sizing: border-box;
+            border: none;
+            font-size: 20px;
+            text-align: center;
+            z-index: 0;
+        }
+
+        .checking {
+            float: left;
+            margin-left: 40%;
+            
+        }
+        .inputtingW {
+            margin: 8px 0;
+            width: 45%;
+            height: 15%;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 5px solid red;
+            background-color: #eeeeee;
+            font-size: 15px;
+            color: red;
+            font-weight: bold;
+        }
+
+        .chating {
+            width: 30%;
+            height: 30%;
+            float: right;
+            border : 2px solid #4CAF50;
+            margin-right : 5px;
+            z-index : 120;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="subBox">
+            <div class="interface" style="height:16%">
+                <p class="AddBtn">
+
+                    <a href="AddClass.html"><img src="image/Add.png" width="40" weight="20" /></a>
+                </p>
+                <a>이름 : </a>
+                <a>admin</a>
+                <br />
+                <br />
+                <a href="/logout" class="Btn">Logout</a>
+
+            </div>
+
+            <div class="boxes">
+                <input type="button" value="btn" onclick='display_on_off();' />
+                <img class="plus" onclick='showplus(1)' align="right" src="image/plus.png" width="30" weight="15" />
+                <button onclick="showClass()">배그</button>
+                <div id="extra1" class="extraes" hidden="hidden">
+                    <p class="pluscontent">
+                        <a id="delete" onclick="deleteRoom();">삭제하기</a>
+                        <br />
+
+                        <a onclick="ChangeCName();" id="changename">이름변경</a><!--이름 변경-->
+                        <br />
+
+                        <a onclick="InviteFriend();" id="invite">친구초대</a>
+                        <br />
+                    </p>
+                </div>
+
+                <textarea id="textar" rows="7" cols="7" hidden="hidden">
+                    </textarea>
+            </div>
+
+            <div class="boxes">
+                <img class="plus" onclick='showplus(2)' align="right" src="image/plus.png" width="30" weight="15" />
+                <div id="extra2" class="extraes" hidden="hidden">
+                    <p class="pluscontent">
+                        <a id="delete" onclick="deleteRoom();">삭제하기</a>
+                        <br />
+
+                        <a onclick="ChangeCName();" id="changename">이름변경</a><!--이름 변경-->
+                        <br />
+
+                        <a onclick="InviteFriend();" id="invite">친구초대</a>
+                        <br />
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div align="center" id="STBox">
+            <input type="text" class="locationsinput" />
+            <input type="text" class="inputer" />
+            <input type='text' class="inputtingname" size='15' readonly>&nbsp;&nbsp;&nbsp;<input type='text' class='inputting' size='120' maxlength='100' id='output' name='Text" + boxID + '>&nbsp;&nbsp; <input type="datetime-local" class="dateandtime" value="2017-12-19T08:30" />
+
+            <label class='container'>
+                <input id='checkbox' type='checkbox' /><span class='checkmark'></span>
+            </label><br><br />
+
+            <div align="left" ID="mainBox">
+
+                <br />
+               <input type="button" onclick="showchat()" value="chat" class="projectchatbtn"/>
+                <br />
+                <br />
+                <div id="chat" class="chating" hidden="hidden">
+                
+                    
+                        <ol class="chat scrollbar" id="chattings" style="overflow:auto;width:100%;height:300px ;margin-right : 3px;">
+                            <li class="other">
+                                <div class="avatar"><img src="http://fimg2.pann.com/new/download.jsp?FileID=22790883" draggable="false" /></div>
+                                <div class="msg">
+                                    <p>Hola!</p>
+                                    <p>
+                                        Te vienes a cenar al centro?
+                                        <time>20:17</time>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2qiquKxkvC59CeXky8CTUMLyCEp5lRN8BYcm0ZIVJH46RwD64" draggable="false" /></div>
+                                <div class="msg">
+                                    <p>Puff...</p>
+                                    <p>Aún estoy haciendo el contexto de Góngora... <emoji class="books" /></p>
+                                    <p>Mejor otro día</p>
+                                    <time>20:18</time>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2qiquKxkvC59CeXky8CTUMLyCEp5lRN8BYcm0ZIVJH46RwD64" draggable="false" /></div>
+                                <div class="msg">
+                                    <p>Puff...</p>
+                                    <p>Aún estoy haciendo el contexto de Góngora... <emoji class="books" /></p>
+                                    <p>Mejor otro día</p>
+                                    <time>20:18</time>
+                                </div>
+                            </li>
+                          
+
+
+
+                        </ol>
+                    <br />
+                        
+                    <input type="text" class="ttr" name="ttr" value="" placeholder="채팅 입력">
+                    <input type="button" class="bbr" name="bbr" value="Enter">
+                 
+
+
+                        <br />
+                        
+                    
+                </div>
+                <div class="Title">
+                    <p align="center">
+                        <font size="6 " color="white">
+                            <script language="JavaScript">
+
+                                var today = new Date()
+                                document.write(today.getYear() + 1900, "년 ",
+                                    today.getMonth() + 1, "월 ", today.getDate(), "일")
+                            </script>
+                        </font>
+                    </p>
+
+                </div>
+
+                <br />
+
+                <div class="Explanation">
+
+                    
+                    <p align="center">
+                        <a>asd</a>
+                    </p>
+
+                </div>
+                <div>
+                    <a href="#" class="correction">수정하기</a><!--href 수정-->
+                </div>
+                <br />
+                <div>
+                    <div class="SelectEndtime" id=inputerDT hidden="hidden">
+                        <input type='datetime-local' class='endtime2' id="now_date"/>
+                        <script>
+                                var nowtime = new Date();
+                                nowtime.setHours(nowtime.getHours() + 9);
+                                document.getElementById('now_date').setAttribute('min', nowtime.toISOString().substring(0, 16));
+                                document.getElementById('now_date').value = nowtime.toISOString().substring(0, 16);
+                        </script>
+
+                    </div>
+                    <div class="writing">
+                        <font size="6">
+                            <br />
+
+
+                            <input type="text" style="font-size:20px" id="input" name="memo" size="30" value="" maxlength="100" placeholder="이곳에 입력하세요.(최대 100자)" ; />
+                        </font>
+                        <p align="right">
+                            <button class="button" onclick="addInput(), output()"><span>Add </span></button>
+
+                        </p>
+                        <div>
+                            
+                            
+                            <form>
+                                <input type="checkbox" onclick="showDT()" size="5" id="checks">
+                                <label for="checks">&nbsp;&nbsp;날짜 설정</label>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+                <br />
+                <div>
+                    <div class="checking">
+                        
+                        <form>
+                            <input type="checkbox" id="check">
+                            <label for="check">&nbsp;종료된 수업보기</label>
+
+                        </form>
+                        
+                    </div>
+
+                    <div class="navigation">
+                        <a class="main" href="#url">정렬기준</a>
+                        <div class="n1"><a onclick="alert('남은 기한으로 정렬');">남은 기한</a></div>
+                        <div class="n2"><a onclick="alert('올린 시간으로 정렬');">올린 시간</a></div>
+                        <div class="n3"><a onclick="alert('오름 차순으로 정렬');">오름 차순</a></div>
+                        <div class="n4"><a onclick="">내림 차순</a></div>
+                    </div>
+
+                    <div id="parah" class="scrollbar" style="overflow:auto; width:93%; height:300px" ;>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

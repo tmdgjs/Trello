@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <script>
+        function parse() {
+            var string = document.getElementById('data').value;
+            if (string.indexOf('오후') != -1) {
+
+            }
+            if (string.indexOf('까지')) {
+                alert(string.split('까지'));
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="data"/>
+    <input type="button" onclick="parse()"/> 
+</body>
+</html>

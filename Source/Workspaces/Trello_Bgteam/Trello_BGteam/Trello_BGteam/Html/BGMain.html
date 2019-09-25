@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BG Main</title>
+    <script type="text/javascript" src="Script1.js"></script>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css" />
+    <script type="text/javascript" src="UserLogin.js"></script>
+   
+</head>
+<body bgcolor="white">
+    <center>
+        <div style="background:#EEEEEE; width : 700px; height : 955px; ">
+            <br />
+            <FONT size="5">
+                <p align="right" onclick="winOpen('Guide.html')" style="cursor:pointer">안내서&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </FONT>
+            <Font size="5">
+                <p align="left">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/findid">ID찾기</a>
+                </p>
+                <p align="left">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/findpass">PW찾기</a>
+                </p>
+            </Font>
+            <FONT face="궁서">
+                <font size="10">
+                    <p align="center">Trello</p>
+                </font>
+            </FONT>
+
+            
+                <div class="form-style-8">
+                    <font size="6">
+                        <br />
+                        <p align="left">
+                            <input type="text" style="font-size:20px" id="username" name="username" size="30" maxlength="15" placeholder="ID" />
+                        </p>
+                        <br />
+                        <p align="left">
+                            <input type="password" style="font-size:20px" id="password" name="password" size="30" maxlength="17" placeholder="PW"  onkeydown="javascript: if (event.keyCode == 13) Login();"/>
+                        </p>
+                    </font>
+                </div>
+
+                <FONT size="6">
+                    <div style=" text-align:center">
+
+                        <input type="button" id ="loginbutton"value="로그인" style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-decoration: none; display: inline-block; font-size: 18px;" onclick="Login()">
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/register">JOIN</a>
+                    </div>
+                </FONT>
+          
+
+            <br />
+           
+            <a href="/auth/naver">
+                <img src="image\naver.jpg" />
+            </a>
+            <a href="/auth/facebook">
+                <img src="image\facebook.jpg" />
+            </a>
+            <br />
+            <a href="/auth/google">
+                <img src="image\google.jpg" />
+            </a>
+            <a href="/auth/kakao">
+                <img src="image\kakao.jpg" />
+            </a>
+        </div>
+    </center>
+</body>
+</html>

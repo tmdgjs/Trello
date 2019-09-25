@@ -1,0 +1,3 @@
+C:\Users\한승헌\Source\Workspaces\Trello_Bgteam\Trello_BGteam\Trello_BGteam\obj\Debug\Trello_BGteam.njsprojResolveAssemblyReference.cache
+C:\Users\한승헌\Source\Workspaces\Trello_Bgteam\Trello_BGteam\Trello_BGteam\obj\Debug\Trello_BGteam.njsproj.CoreCompileInputs.cache
+C:\Users\한승헌\Source\Workspaces\Trello_Bgteam\Trello_BGteam\Trello_BGteam\bin\Microsoft.NodejsTools.WebRole.dll

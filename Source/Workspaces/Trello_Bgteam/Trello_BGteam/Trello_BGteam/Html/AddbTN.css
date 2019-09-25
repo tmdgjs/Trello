@@ -1,0 +1,45 @@
+﻿.Add {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #6ea7e0), color-stop(1, #80b5ea) );
+    background: -moz-linear-gradient( center top, #6ea7e0 5%, #80b5ea 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ea7e0', endColorstr='#80b5ea');
+    background-color: #6ea7e0;
+    -webkit-border-top-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -moz-border-radius-topright: 0px;
+    border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-bottom-left-radius: 0px;
+    text-indent: 0px;
+    border: 2px solid #75baff;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 19px;
+    font-weight: bold;
+    font-style: normal;
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    margin : 15px;
+}
+
+.Add:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #6ea7e0) );
+    background: -moz-linear-gradient( center top, #80b5ea 5%, #6ea7e0 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#6ea7e0');
+    background-color: #80b5ea;
+}
+
+.Add:active {
+    position: relative;
+    top: 1px;
+}
+

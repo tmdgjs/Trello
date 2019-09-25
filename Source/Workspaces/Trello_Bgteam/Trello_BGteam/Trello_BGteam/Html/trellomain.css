@@ -1,0 +1,280 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+body {
+    padding: 20px;
+}
+
+.interface {
+    background: #EEEEEE;
+    width: 100%;
+    height: 13.8%;
+    border: 2px solid black;
+    border-bottom: none;
+    text-align: center;
+}
+
+.boxes {
+    background: #EEEEEE;
+    width: 100%;
+    height: 13.8%;
+    border: 2px solid black;
+    border-bottom: none;
+    text-align: center;
+    max-width: 100%;
+    background-size: cover;
+}
+
+    .boxes .Btns {
+        color: #000000;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+#class0x1 {
+    background-image: url(image/BattleGround.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#wrap {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+    #wrap > div {
+        display: inline-block;
+        float: left;
+        height: 900px;
+    }
+
+#mainBox { /*클래스 박스*/
+    background: #EEEEEE;
+    width: 100%;
+    border-bottom: 2px solid black;
+    visibility: hidden;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    margin-left: 10px;
+}
+
+#STBox {
+    background: #EEEEEE;
+    background-repeat: no-repeat;
+    width: 82%;
+    margin-left: 10px;
+    border: 2px solid black;
+    background-image: url(image/start.png);
+}
+
+
+.subBox div:last-child {
+    border-bottom: 2px solid black;
+}
+
+.subBox {
+    width: 15%;
+}
+
+.AddBtn {
+    text-align: right;
+    
+}
+
+.showfriend {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.Title {
+    /*background-image: url(image/BattleGround.png);*/
+    background-size: inherit;
+    width: 50%;
+    height: auto;
+    border: 2px solid black;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    margin: 10px 30px;
+    /*background-color: rgba(255,255,255,0.4);투명도*/
+}
+
+
+.Explanation {
+    background: #ffffff;
+    width: 50%;
+    height: auto;
+    border: 2px solid black;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    margin: 10px 30px;
+}
+
+#parah {
+    padding: 60px 50px;
+}
+
+.buttons {
+    background-color: crimson;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttons5 {
+    border-radius: 50%;
+}
+
+.Btns {
+    cursor: pointer;
+}
+
+#btns0x1 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.inputting {
+    width: 45%;
+    height: 15%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: #eeeeee;
+    font-size: 15px;
+    border-right: none;
+}
+
+.inputtingname {
+    width: 8%;
+    height: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid red;
+    background-color: #eeeeee;
+    font-size: 15px;
+    text-align: center;
+}
+
+.endtime {
+    width: 12%;
+    margin: 8px 0;
+    height: 15%;
+    box-sizing: border-box;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    border: 5px solid red;
+    border-left: none;
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+.until {
+    width: 5%;
+    height: 15%;
+    box-sizing: border-box;
+    border: none;
+    background-color: #eeeeee;
+    font-size: 12px;
+    text-align: right;
+    border: 5px solid red;
+    border-right: none;
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+.upload {
+    margin: 8px 0;
+    width: 13%;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-left: none;
+    background-color: #eeeeee;
+    font-size: 15px;
+}
+
+.plus {
+    cursor: pointer;
+}
+
+
+
+.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #ffffff;
+    margin: 10px 10px;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+    background-color: #eeeeee;
+}
+
+.scrollbar::-webkit-scrollbar-thumb { /*bar 색*/
+    background-color: skyblue;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
+}
+
+.locationsinput {
+    border: 3px solid white;
+    -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+    font-size: 17px;
+    width: 6%;
+    height: 10%;
+    background: #fff982;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.alls {
+    max-width: 100%;
+    height: auto;
+}
+
+.pluscontent {
+    cursor: pointer;
+}
+
+.extraes {
+    position: relative;
+    top: 7%;
+    left: 50%;
+    width: 40%;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 15px;
+    z-index: 1;
+    border: 3px solid #F5624D !important;
+    -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.5);
+}
